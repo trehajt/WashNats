@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Washington Nationals Players</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      text-align: center;
+    }
+    .player-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px;
+    }
+    .player-list-item {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Washington Nationals Players</h1>
+  <ul class="player-list" id="playerList"></ul>
+
+  <script>
+    // Player data
+    var players = [
+      {
+        name: "Max Scherzer",
+        bio: "Max Scherzer is an American professional baseball pitcher. He is a three-time Cy Young Award winner and has been selected to the All-Star Game eight times.",
+      },
+      {
+        name: "Juan Soto",
+        bio: "Juan Soto is a Dominican professional baseball outfielder. He made his MLB debut in 2018 and has quickly become one of the most promising young players in the league.",
+      },
+      // Add more player objects here
+    ];
+
+    // Display players and bios
+    var playerList = document.getElementById("playerList");
+
+    players.forEach(function(player) {
+      var listItem = document.createElement("li");
+      listItem.classList.add("player-list-item");
+
+      var nameElement = document.createElement("h3");
+      nameElement.textContent = player.name;
+
+      var bioElement = document.createElement("p");
+      bioElement.textContent = player.bio;
+
+      listItem.appendChild(nameElement);
+      listItem.appendChild(bioElement);
+
+      playerList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
